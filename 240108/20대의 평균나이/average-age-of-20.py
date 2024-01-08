@@ -5,6 +5,8 @@ while True:
 
     if n>=30:
         break
+    if n<20:
+        break
     ave+=n
     cnt+=1
 
