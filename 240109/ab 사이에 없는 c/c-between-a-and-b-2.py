@@ -4,10 +4,10 @@ a,b,c=int(arr[0]),int(arr[1]),int(arr[2])
 sat=True
 
 for i in range (a,b+1):
-    if c%i!=0:
+    if i%c==0:
         sat=False
 
-if sat==False:
+if sat==True:
     print('YES')
 else:
     print('NO')
