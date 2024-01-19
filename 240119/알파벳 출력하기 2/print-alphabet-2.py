@@ -7,5 +7,7 @@ for i in range(n):
     for j in range(n-i):
         print(cnt,end=' ')
         cnt = chr(ord(cnt) + 1)
+        if cnt=='[':
+            cnt='A'
    
     print()
