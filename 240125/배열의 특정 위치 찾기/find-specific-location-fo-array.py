@@ -10,4 +10,4 @@ for i in range (1,n+1,2):
 
 avg=(arr[2]+arr[5]+arr[8])/3
 
-print(sum_val, avg)
+print(f"{sum_val} {avg:0.1f}")
