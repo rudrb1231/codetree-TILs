@@ -1,14 +1,24 @@
+import sys
+
 n1,n2= list(map(int,input().split()))
 
-A=list(map(int,input().split()))
+arr1=list(map(int,input().split()))
 
-B=list(map(int,input().split()))
+arr2=list(map(int,input().split()))
 
-idx= 0
+for i in range(n1):
+    success=True
+    for j in range(n2):
+        if i+j>=n1:
+            success=False
+            break
 
-for i in range(0,n1-n2):
-    if A[i:i+n2] == B:
+        
+        if arr1[i+j] != arr2[j]:
+            success=False
+            break
+
+    if success:
         print('Yes')
-        idx+=1
-if idx == 0:
-    print('No')
+        sys.exit()
+print("No")
