@@ -1,16 +1,29 @@
-import sys
-n=int(input())
+dic = {}
 
-arr=list(map(int,input().split()))
+n = int(input())
 
-cnt=0
+lst = list(map(int, input().split()))
 
-max_val=max(arr)
+for x in lst:
 
-for i in range(n):
-    if arr[i] == max_val:
-        cnt+=1
-if cnt>=2:
-    print('-1')
-else:
-    print(max_val)
+    if x in dic:
+
+        dic[x] += 1
+
+    else :
+
+        dic[x] = 1
+
+sortDic = sorted((dic), reverse=True)
+
+flag = 0
+
+for x in sortDic:
+
+    if dic[x] > 1:
+        continue
+    else:
+        flag = x
+        break
+    
+print( "-1" if flag == 0 else flag)
