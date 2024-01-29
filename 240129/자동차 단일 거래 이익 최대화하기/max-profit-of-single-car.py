@@ -6,6 +6,9 @@ arr=list(map(int,input().split()))
 max_ben=0
 min_buy=100
 for i in range(n):
+    if n==1:
+        break
+
     if arr[i]<min_buy:
         min_buy=arr[i]
 
