@@ -5,7 +5,6 @@ arr1= []
 for i in range(n):
     arr=input()
     d+=len(arr)
-    for j in range(len(arr)):
-        if arr[j]=='a':
-            cnt+=1
+    if arr[0]=='a':
+        cnt+=1
 print(d,cnt )
