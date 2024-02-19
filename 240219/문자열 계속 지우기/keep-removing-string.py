@@ -1,10 +1,9 @@
-A=list(input())
-B=list(input())
-leng=len(A)
-leng2=len(B)
+A=input()
+B=input()
 
-for i in range(leng):
-    if A[i:i+leng2]==B[:]:
-        A=A[:i]
 
-print(''.join(A))
+while A.find(B) !=-1:
+    start_pos = A.find(B)
+    A=A[:start_pos]+A[start_pos+len(B):]
+
+print(A)
