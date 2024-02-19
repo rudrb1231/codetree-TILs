@@ -11,6 +11,5 @@ for i in range(q):
         l=l[-1]+l[0:-1]
         print(l)
     else:
-        l=list(l)
-        l.reverse()
-        print(''.join(l))
+        l=l[::-1]
+        print(l)
