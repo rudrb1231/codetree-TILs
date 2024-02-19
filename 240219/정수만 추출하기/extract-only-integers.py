@@ -1,21 +1,23 @@
-x=input().split()
-x1,x2=x[0],x[1]
-d=0
-while x1[0]<'0' or x1[0]>'9':
-    x1=x1[1:]
+from sys import stdin
+a, b = stdin.readline().split()
 
-while x2[0]<'0' or x2[0]>'9':
-    x2=x2[1:]
+# 앞에 문자열 제거
+while a[0] < '0' or a[0] > '9':
+    a = a[1:]
 
+while b[0] < '0' or b[0] > '9':
+    b = b[1:]
+
+# 앞에 수 부분 추출
 num_a = ""
-while x1[0] >= '0' and x1[0] <= '9':
-    num_a += x1[0]
-    x1 = x1[1:]
+while a[0] >= '0' and a[0] <= '9':
+    num_a += a[0]
+    a = a[1:]
 
 num_b = ""
-while x2[0] >= '0' and x2[0] <= '9':
-    num_b += x2[0]
-    x2 = x2[1:]
+while b[0] >= '0' and b[0] <= '9':
+    num_b += b[0]
+    b = b[1:]
 
 # 출력
 print(int(num_a) + int(num_b))
