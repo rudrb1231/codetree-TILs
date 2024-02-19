@@ -1,23 +1,29 @@
-from sys import stdin
-a, b = stdin.readline().split()
+# 문자열을 구현하여 입력받습니다.
+a, b = input().split()
 
-# 앞에 문자열 제거
-while a[0] < '0' or a[0] > '9':
-    a = a[1:]
+idx1 = 0
+idx2 = 0
 
-while b[0] < '0' or b[0] > '9':
-    b = b[1:]
+# a의 정수로 변환 가능한 최대 인덱스를 찾습니다.
+for elem in a:
+	if elem <= '9' and elem >= '0':
+		idx1 += 1
+	else:
+		break
 
-# 앞에 수 부분 추출
-num_a = ""
-while a[0] >= '0' and a[0] <= '9':
-    num_a += a[0]
-    a = a[1:]
+# b의 정수로 변환 가능한 최대 인덱스를 찾습니다.
+for elem in b:
+	if elem <= '9' and elem >= '0':
+		idx2 += 1
+	else:
+		break
+	
+str1 = a[:idx1]
+str2 = b[:idx2]
+	
+# 합쳐진 문자열을 숫자로 바꿉니다.
+str1 = int(str1)
+str2 = int(str2)
 
-num_b = ""
-while b[0] >= '0' and b[0] <= '9':
-    num_b += b[0]
-    b = b[1:]
-
-# 출력
-print(int(num_a) + int(num_b))
+# 두 숫자의 합을 출력합니다.
+print(str1 + str2)
