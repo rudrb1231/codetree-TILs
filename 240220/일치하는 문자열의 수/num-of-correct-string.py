@@ -5,6 +5,6 @@ cnt=0
 
 for i in range(n):
     m=input()
-    if m==A:
-        break
-print(i)
+    if A==m:
+        cnt+=1
+print(cnt)
