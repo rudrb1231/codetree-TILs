@@ -1,7 +1,8 @@
 a,b=map(int,input().split())
 def choi(n,m):
-    for i in range(min(n,m),2,-1):
+    gcd=0
+    for i in range(1,min(n,m)+1):
         if n%i==0 and m%i==0:
-            break
-    print(i)
+            gcd=i
+    print(gcd)
 choi(a,b)
