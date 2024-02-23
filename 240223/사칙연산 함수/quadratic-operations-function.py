@@ -8,7 +8,7 @@ def calcul (a,b,c):
     elif b=='/':
         print(f'{a} / {c} = {a//c}')
     else:
-        print('false')
+        print('False')
 
 inp=input().split()
 a=int(inp[0])
