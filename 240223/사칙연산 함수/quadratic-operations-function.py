@@ -6,7 +6,7 @@ def calcul (a,b,c):
     elif b=='*':
         print(f'{a} * {c} = {a*c}')
     elif b=='/':
-        print(f'{a} / {c} = {a+c}')
+        print(f'{a} / {c} = {a//c}')
     else:
         print('false')
 
