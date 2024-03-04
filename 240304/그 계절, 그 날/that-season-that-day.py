@@ -3,14 +3,15 @@ y,m,d=list(map(int,input().split()))
 
 #윤년일때 true 아니면 false
 def years(y):
-    if y%4==0:
+    if (y%4==0 and y%100==0) and y%400==0:
+        return True 
+    elif y%4==0 and y%100==0:
+        return False
+    elif y%4==0:
         return True
-        if y%100==0:
-            return False 
-            if y%400==0:
-                return True
     else:
         return False
+
 
 def month_day(y,m,d): 
     if m==4 or m==6 or m==9 or m==11: # 30일만 있는 달 31일일떄만 false#
@@ -48,5 +49,7 @@ def seasons(y,m,d):
     else:
         print('-1')
 
+
+years(y)
 
 seasons(y,m,d)
