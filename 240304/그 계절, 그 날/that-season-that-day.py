@@ -12,23 +12,26 @@ def years(y):
     else:
         return False
 
-def month_day(y,m,d):
-    if m==4 or m==6 or m==9 or m==11:
+def month_day(y,m,d): 
+    if m==4 or m==6 or m==9 or m==11: # 30일만 있는 달 31일일떄만 false#
         if d==31:
             return False
         else:
             return True
     elif m==2:
         if years(y):
-            if m>29:
+            if d>29:
                 return False
             else:
                 return True
         else:
-            if m>28:
+            if d>28:
                 return False
             else:
                 return True
+    else:
+        return True
+
 
 
 
