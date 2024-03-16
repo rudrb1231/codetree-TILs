@@ -1,7 +1,6 @@
-A=input().split()
-
+A=input()
 def palindrome(A):
-    if A[::-1]==A:
+    if A==A[::-1]:
         print('Yes')
     else:
         print('No')
